@@ -1,1 +1,1 @@
-# Simple template of gulp project.
+# Simple gulp project template.
