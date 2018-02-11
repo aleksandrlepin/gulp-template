@@ -8,6 +8,7 @@ var sourceMaps = require('gulp-sourcemaps');
 var server = require('gulp-server-livereload');
 var imageMin = require('gulp-imagemin');
 var cache = require('gulp-cache');
+var babel = require('gulp-babel');
 
 gulp.task('sass', function() {
     return sass('src/scss/*.scss', { sourcemap: true, style: 'compact' })
