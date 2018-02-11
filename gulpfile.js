@@ -25,8 +25,16 @@ gulp.task('pages', function () {
         .pipe(gulp.dest('dist'))
 });
 
+// gulp.task('js', function () {
+//     return gulp.src('src/js/*.js')
+//         .pipe(gulp.dest('dist/js'))
+// });
+
 gulp.task('js', function () {
-    return gulp.src('src/js/*.js')
+    gulp.src('src/js/*.js')
+        .pipe(babel({
+            presets: ['env']
+        }))
         .pipe(gulp.dest('dist/js'))
 });
 
